@@ -4,6 +4,7 @@
 This algorithm was developed in an attempt to best simulate the behaviour of an electric current travelling through an inhomogeneous, insulating material following dielectric breakdown.
 
 The Animations folder has a few selected animations (obviously) from certain versions of the algorithm.
+
 The Source Codes folder has \**drumroll\** the source codes of the latest Single Branch Algorithm, DFS Multi-Branch Algorithm, and BFS Multi-Branch Algorithm.
 
 
