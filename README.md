@@ -39,13 +39,13 @@ That's about it :/
 
 ## FAQ
 
-#### Why did you start this project?
+#### Q: Why did you start this project?
 
-Because my CV is only half a page long.
+A: Because my CV is only half a page long.
 
-#### Your figures don't really look like Lichtenberg figures...
+#### Q: Your figures don't really look like Lichtenberg figures...
 
-Your face doesn't really look like a face. Whatever dude. I'm working on it.
+A: Your face doesn't really look like a face. Whatever dude. I'm working on it.
 
 
 ## Feedback
