@@ -21,7 +21,7 @@ The Source Codes folder has \**drumroll\** the source codes of the latest Single
 
 ## Documentation
 
-Yeah, one day.
+Hold on, I'm about to get an ArXiv publication.
 
 
 ## License
