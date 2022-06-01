@@ -21,7 +21,7 @@ The Source Codes folder has \**drumroll\** the source codes of the latest Single
 
 ## Documentation
 
-Hold on, I'm about to get an ArXiv publication. Nevermind, got rejected :(
+Hold on, I'm about to get an ArXiv publication. Nevermind, got rejected :( but here: [a link](https://github.com/epa058/Lichtenberg-Figures/blob/main/Paper%20rejected%20by%20arXiv.pdf)
 
 
 ## License
