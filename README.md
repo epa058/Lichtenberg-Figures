@@ -40,11 +40,11 @@ That's about it :/
 
 ## Related
 
-- [Yale: Diffusion-Limited Aggregation](https://web.archive.org/web/20030805085849/http://classes.yale.edu/fractals/Panorama/Physics/DLA/DLA.html)
-- [Chromia: Lichtenberg](https://github.com/chromia/lichtenberg)
+- [chromia: lichtenberg](https://github.com/chromia/lichtenberg)
+- [goedel-gang: lightning](https://github.com/goedel-gang/lightning)
 - [neut: neutenpoel](https://github.com/neut/neutenpoel)
 - [stompchicken: lichtenberg](https://github.com/stompchicken/lichtenberg)
-- [goedel-gang: lightning](https://github.com/goedel-gang/lightning)
+- [Yale: Diffusion-Limited Aggregation](https://web.archive.org/web/20030805085849/http://classes.yale.edu/fractals/Panorama/Physics/DLA/DLA.html)
 
 ## FAQ
 
