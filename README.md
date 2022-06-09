@@ -42,6 +42,9 @@ That's about it :/
 
 - [Yale: Diffusion-Limited Aggregation](https://web.archive.org/web/20030805085849/http://classes.yale.edu/fractals/Panorama/Physics/DLA/DLA.html)
 - [Chromia: Lichtenberg](https://github.com/chromia/lichtenberg)
+- [neut: neutenpoel](https://github.com/neut/neutenpoel)
+- [stompchicken: lichtenberg](https://github.com/stompchicken/lichtenberg)
+- [goedel-gang: lightning](https://github.com/goedel-gang/lightning)
 
 ## FAQ
 
