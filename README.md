@@ -50,13 +50,17 @@ That's about it :/
 
 #### Q: Why did you start this project?
 
-A: Because my CV is only half a page long.
+A: Because I thought it was cool. Why do people do anything?
 
 #### Q: Your figures don't really look like Lichtenberg figures...
 
-A: Your face doesn't really look like a face. Whatever dude. I'm working on it.
+A: I'm working on it :(
+
+#### Q: Have you thought about implementing diffu-
+
+A: Yes I've thought about diffusion-limited aggregation. It's like the first thing you see when you Google "Lichtenberg figure simulations." I don't like it; it's not what I'm going for. 
 
 
 ## Feedback
 
-If you have any feedback, don't reach out to me. I don't want to hear it. But here's my email: epa058@gmail.com
+If you have any feedback, I'd like to hear it!. Here's my email: epa058@gmail.com
