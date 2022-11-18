@@ -28,7 +28,7 @@ Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blo
 
 ## License
 
-Not yet :(
+GNU GPLv3
 
 
 ## Features
