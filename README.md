@@ -23,7 +23,7 @@ The Source Codes folder has \**drumroll\** the source codes of the latest Single
 
 Hold on, I'm about to get an arXiv publication. Nevermind, got rejected :( 
 
-Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blob/main/Paper%20rejected%20by%20arXiv.pdf)
+Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blob/main/Paper.pdf)
 
 
 ## License
