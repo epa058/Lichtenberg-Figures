@@ -50,7 +50,7 @@ That's about it :/
 
 #### Q: Why did you start this project?
 
-A: Because I thought it was cool. Why do people do anything?
+A: Because I thought it was cool.
 
 #### Q: Your figures don't really look like Lichtenberg figures...
 
@@ -60,7 +60,7 @@ A: I'm working on it :(
 
 A: Yes I've thought about diffusion-limited aggregation. It's like the first thing you see when you Google "Lichtenberg figure simulations." I don't like it; it's not what I'm going for. 
 
-*sigh* It was diffusion-limited aggregation after all.
+*(sigh)* It was diffusion-limited aggregation after all.
 
 
 ## Feedback
