@@ -60,6 +60,8 @@ A: I'm working on it :(
 
 A: Yes I've thought about diffusion-limited aggregation. It's like the first thing you see when you Google "Lichtenberg figure simulations." I don't like it; it's not what I'm going for. 
 
+*sigh* It was diffusion-limited aggregation after all.
+
 
 ## Feedback
 
