@@ -50,7 +50,7 @@ That's about it :/
 
 #### Q: Why did you start this project?
 
-A: Because I thought it was cool.
+A: Because I thought it was cool
 
 #### Q: Your figures don't really look like Lichtenberg figures...
 
@@ -65,4 +65,4 @@ A: Yes I've thought about diffusion-limited aggregation. It's like the first thi
 
 ## Feedback
 
-If you have any feedback, I'd like to hear it!. Here's my email: epa058@gmail.com
+If you have any feedback, I'd like to hear it! Here's my email: epa058@gmail.com
