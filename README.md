@@ -30,6 +30,10 @@ Hold on, I'm about to get on arXiv!! Nevermind, got rejected :(
 
 Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blob/main/Paper.pdf)
 
+## Real References
+- L. Niemeyer, L. Pietronero, and H. J. Wiesmann, "Fractal Dimensions of Dielectric Breakdown," *Physical Review Letters*, vol. 52, no. 12, pp. 1033-1036, 1984.
+- L. Pietronero and H. J. Wiesmann, "Stochastic Model for Dielectric Breakdown," *Journal of Statistical Physics*, vol. 36, pp. 909-916, 1984.
+- A. A. Tsonis and J. B. Elsner, "Fractal Characterization and Simulation of Lightning," *Beiträge zur Physik der Atmosphäre*, vol. 60, no. 2, pp. 187-192, 1987.
 
 ## License
 
