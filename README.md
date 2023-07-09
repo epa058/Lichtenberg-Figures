@@ -30,6 +30,14 @@ Hold on, I'm about to get on arXiv!! Nevermind, got rejected :(
 
 Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blob/main/Paper.pdf)
 
+## Related
+
+- [chromia: lichtenberg](https://github.com/chromia/lichtenberg)
+- [goedel-gang: lightning](https://github.com/goedel-gang/lightning)
+- [neut: neutenpoel](https://github.com/neut/neutenpoel)
+- [stompchicken: lichtenberg](https://github.com/stompchicken/lichtenberg)
+- [Yale: Diffusion-Limited Aggregation](https://web.archive.org/web/20030805085849/http://classes.yale.edu/fractals/Panorama/Physics/DLA/DLA.html)
+
 ## Real References
 - L. Niemeyer, L. Pietronero, and H. J. Wiesmann, "Fractal Dimensions of Dielectric Breakdown," *Physical Review Letters*, vol. 52, no. 12, pp. 1033-1036, 1984.
 - L. Pietronero and H. J. Wiesmann, "Stochastic Model for Dielectric Breakdown," *Journal of Statistical Physics*, vol. 36, pp. 909-916, 1984.
@@ -48,19 +56,11 @@ GNU General Public License v3.0
 
 That's about it :/
 
-## Related
-
-- [chromia: lichtenberg](https://github.com/chromia/lichtenberg)
-- [goedel-gang: lightning](https://github.com/goedel-gang/lightning)
-- [neut: neutenpoel](https://github.com/neut/neutenpoel)
-- [stompchicken: lichtenberg](https://github.com/stompchicken/lichtenberg)
-- [Yale: Diffusion-Limited Aggregation](https://web.archive.org/web/20030805085849/http://classes.yale.edu/fractals/Panorama/Physics/DLA/DLA.html)
-
 ## FAQ
 
 #### Q: Why did you start this project?
 
-A: Because I thought it was cool!
+A: A while back, I saw a few people on YouTube making Lichtenberg figures by burning wood (the ones where two electric trees form and meet in the middle) and thought that it looked cool. Since I didn't lack a sufficient amount of self-preservation( [^1] ), I thought it'd be a better idea to simulate it instead.
 
 #### Q: Your figures don't really look like Lichtenberg figures...
 
