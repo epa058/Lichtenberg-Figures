@@ -156,7 +156,7 @@ plt.show()
 
 '''
 # Simple plotting
-newGrid = np.zeros((n, n))
+newGrid = np.zeros((x_row, y_col))
 for i, j in growth:
     newGrid[i, j] = 1
     
@@ -164,8 +164,8 @@ fig, ax = plt.subplots()
 ax.matshow(grid, cmap='Blues')
 ax.matshow(newGrid, cmap='Blues')
 # Ticks
-ax.set_xticks(np.arange(-0.5, n, 1), minor=True)
-ax.set_yticks(np.arange(-0.5, n, 1), minor=True)
+ax.set_xticks(np.arange(-0.5, x_row, 1), minor=True)
+ax.set_yticks(np.arange(-0.5, y_col, 1), minor=True)
 ax.grid(which='minor', linestyle='-', linewidth=1)
 
 plt.show()
