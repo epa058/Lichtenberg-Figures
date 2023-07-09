@@ -60,7 +60,7 @@ That's about it :/
 
 #### Q: Why did you start this project?
 
-A: A while back, I saw a few people on YouTube making Lichtenberg figures by burning wood (the ones where two electric trees form and meet in the middle) and thought that it looked cool. Since I didn't lack a sufficient amount of self-preservation( [^1] ), I thought it'd be a better idea to simulate it instead.
+A: A while back, I saw a few people on YouTube making Lichtenberg figures by burning wood (the ones where two electric trees form and meet in the middle) and thought that it looked cool. Since I didn't lack a sufficient amount of self-preservation[^1], I thought it'd be a better idea to simulate it instead.
 
 #### Q: Your figures don't really look like Lichtenberg figures...
 
@@ -70,7 +70,7 @@ A: That was a valid criticism back in 2022. Now you're just being picky.
 
 A: Because I said so.
 
-
+[^1] See: https://www.woodturner.org/Woodturner/Woodturner/Resources/Safety-Materials/Safety-Fractal-Burning-Lichtenburg-Burning.aspx
 ## Feedback
 
 If you have any feedback, I'd like to hear it! Here's my email: epa058@gmail.com
