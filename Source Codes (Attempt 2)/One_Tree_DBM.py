@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.animation import FuncAnimation
 
-# Create a grid of zeros
+# Create a rectangular grid of zeros
 print('Enter a number of rows, e.g.: 100:')
 x_row = int(input())
 
@@ -29,17 +29,19 @@ grid[-1, :] = 10
 growth = []
 
 # Set the growth site
+'''
+print('Enter a starting position, e.g.: 0, 0:')
+growRow, growCol = input().split(",")
+growRow = int(growRow)
+growCol = int(growCol)
+growPt = (growRow, growCol)
+grid[growPt] = 0
+growth.append(growPt)
+'''
 growRow = 0
 growCol = y_col // 2
 growPt = (growRow, growCol)
-#grid[growPt] = 0
 growth.append(growPt)
-'''
-print('Enter a starting position, e.g.: 0, 0:')
-x_input, y_input = input().split(",")
-x_input = int(x_input)
-y_input = int(y_input)
-'''
 
 # Initializing Laplace's equation on the grid
 iterations = 100
@@ -51,7 +53,7 @@ for _ in range(iterations):
             left = grid[i, (j-1) % y_col]
             right = grid[i, (j+1) % y_col]
             grid[i, j] = (left + right + up + down) / 4
-print(grid)
+# print(grid)
 
 # Define the Laplace operator
 def laplaceOperator(grid):
@@ -72,7 +74,7 @@ def laplaceOperator(grid):
 def laplaceEquation(grid, iterations = 100):
     for _ in range(iterations):
         grid = laplaceOperator(grid)
-    print(grid)
+    # print(grid)
     return grid
 
 def simulation(grid):
@@ -143,7 +145,7 @@ def animate(i):
         ax.matshow(Grid, cmap='Blues')
 
     except IndexError:
-        print("Done")
+        print("Done!")
         return Grid
 
 fig, ax = plt.subplots()
@@ -151,7 +153,6 @@ fig, ax = plt.subplots()
 ani = FuncAnimation(fig, animate, frames = len(growth), interval = 0.0001, repeat = False)
 # ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
 plt.show()
-
 
 '''
 # Simple plotting
