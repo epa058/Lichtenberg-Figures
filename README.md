@@ -42,7 +42,8 @@ GNU General Public License v3.0
 
 ## Features
 
-- Create your own custom grids and choose your own starting positions
+- Create your own custom grids!
+- Choose your own starting positions! (you no longer get to do this with the new algorithms because I said so)
 - Live animations!
 
 That's about it :/
@@ -59,11 +60,15 @@ That's about it :/
 
 #### Q: Why did you start this project?
 
-A: Because I thought it was cool
+A: Because I thought it was cool!
 
 #### Q: Your figures don't really look like Lichtenberg figures...
 
-A: I'm working on it :( Do they now?
+A: That was a valid criticism back in 2022. Now you're just being picky.
+
+#### Q: Why can we no longer set our own starting positions for algorithms 3 and 4?
+
+A: Because I said so.
 
 
 ## Feedback
