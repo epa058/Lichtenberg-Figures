@@ -7,11 +7,11 @@ This algorithm was developed in an attempt to best simulate the behaviour of an 
 
 The folder **Source Codes (Attempt 1)** contains Python scripts of my first attempt. After working on the single-branch algorithm, I mistakenly implemented depth-first search (DFS) rather than breadth-first search (BFS) for my multi-branch algorithm (I'm no CS major). In the end, my friend Shan Gao helped me develop the final, multi-branch BFS version of this algorithm.
 
-The folder **Animations (Attempt 1)** contains a few animations from certain versions of this first attempt. Unfortunately, the patterns generated on this attempt appear unphysical and do not at all resemble Lichtenberg figures.
+The folder **Animations (Attempt 1)** contains a few animations from certain versions of this first attempt. Unfortunately, the patterns generated in this attempt appear unphysical and do not at all resemble Lichtenberg figures.
 
 The folder **Source Codes (Attempt 2)** contains Python scripts of my latest attempt. For this attempt, I decided to actually read some papers about diffusion-limited aggregation (DLA) and the dielectric breakdown model (DBM). The papers I used as references are mentioned below. I then wrote two different algorithms: the single-tree algorithm and the double-tree algorithm. 
 
-The folder **Animations (Attempt 2)** contains a few selected animations from certain versions of this second attempt. The patterns generated on this attempt are much more realistic and finally resemble Lichtenberg figures.
+The folder **Animations (Attempt 2)** contains a few selected animations from certain versions of this second attempt. The patterns generated in this attempt are much more realistic and finally resemble Lichtenberg figures.
 
 ## Authors
 
