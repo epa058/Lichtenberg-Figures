@@ -3,6 +3,10 @@ import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.animation import FuncAnimation
+import sys
+print(sys.getrecursionlimit())
+sys.setrecursionlimit(2000)
+print(sys.getrecursionlimit())
 
 # Create a rectangular grid of zeros
 print('Enter a number of rows, e.g.: 100:')
@@ -53,10 +57,7 @@ for _ in range(iterations):
             left = grid[i, (j-1) % y_col]
             right = grid[i, (j+1) % y_col]
             grid[i, j] = (left + right + up + down) / 4
-<<<<<<< Updated upstream:Source Codes (Attempt 2)/One_Tree_DBM_Rectangular.py
 # print(grid)
-=======
->>>>>>> Stashed changes:Source Codes (Attempt 2)/One_Tree_DBM.py
 
 # Define the Laplace operator
 def laplaceOperator(grid):
@@ -77,10 +78,7 @@ def laplaceOperator(grid):
 def laplaceEquation(grid, iterations = 100):
     for _ in range(iterations):
         grid = laplaceOperator(grid)
-<<<<<<< Updated upstream:Source Codes (Attempt 2)/One_Tree_DBM_Rectangular.py
     # print(grid)
-=======
->>>>>>> Stashed changes:Source Codes (Attempt 2)/One_Tree_DBM.py
     return grid
 
 def simulation(grid):
