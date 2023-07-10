@@ -77,7 +77,10 @@ def laplaceOperator(grid):
 def laplaceEquation(grid, iterations = 100):
     for _ in range(iterations):
         grid = laplaceOperator(grid)
+<<<<<<< Updated upstream:Source Codes (Attempt 2)/One_Tree_DBM_Rectangular.py
     # print(grid)
+=======
+>>>>>>> Stashed changes:Source Codes (Attempt 2)/One_Tree_DBM.py
     return grid
 
 def simulation(grid):
