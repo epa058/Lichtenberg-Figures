@@ -44,7 +44,6 @@ Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blo
 - [goedel-gang: lightning](https://github.com/goedel-gang/lightning)
 - [neut: neutenpoel](https://github.com/neut/neutenpoel)
 - [stompchicken: lichtenberg](https://github.com/stompchicken/lichtenberg)
-- 
 
 
 ## License
