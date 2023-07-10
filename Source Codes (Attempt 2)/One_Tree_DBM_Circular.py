@@ -3,6 +3,10 @@ import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.animation import FuncAnimation
+import sys
+print(sys.getrecursionlimit())
+sys.setrecursionlimit(2000)
+print(sys.getrecursionlimit())
 
 # Create a circular grid
 print('Enter a radius, e.g.: 50:')
