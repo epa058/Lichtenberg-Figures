@@ -53,7 +53,10 @@ for _ in range(iterations):
             left = grid[i, (j-1) % y_col]
             right = grid[i, (j+1) % y_col]
             grid[i, j] = (left + right + up + down) / 4
+<<<<<<< Updated upstream:Source Codes (Attempt 2)/One_Tree_DBM_Rectangular.py
 # print(grid)
+=======
+>>>>>>> Stashed changes:Source Codes (Attempt 2)/One_Tree_DBM.py
 
 # Define the Laplace operator
 def laplaceOperator(grid):
@@ -98,7 +101,7 @@ def simulation(grid):
     # Calculate growth probability for each possible growth site
     probabilities = []
     for i, j in possibleSites:
-        prob = grid[i, j] # you can square or square root this
+        prob = grid[i, j]**2 # you can square or square root this
         probabilities.append(prob)
 
     # Normalize probabilities
@@ -137,7 +140,7 @@ Grid = np.zeros((x_row, y_col))
 # Animation
 def animate(i): 
     try:
-        print(i)
+        #print(i)
         x = growth[i][0]
         y = growth[i][1]
         Grid[x][y] = i + 100
@@ -151,7 +154,7 @@ def animate(i):
 fig, ax = plt.subplots()
 
 ani = FuncAnimation(fig, animate, frames = len(growth), interval = 0.0001, repeat = False)
-# ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
+ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
 plt.show()
 
 '''
