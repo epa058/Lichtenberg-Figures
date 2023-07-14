@@ -63,13 +63,29 @@ while x < y:
 grid[x0, y0] = 0
 for i, j in perimeter:
     grid[i, j] = 1
-    
+
+# Define exterior points
+exterior = []
+for i in range(N):
+    for j in range(N):
+        if ((i - x0)**2 + (j - y0)**2) > r**2 and (i, j) not in perimeter:
+            pt = (i, j)
+            exterior.append(pt)
+            
+# Define interior points
+interior = []
+for i in range(N):
+    for j in range(N):
+        if ((i - x0)**2 + (j - y0)**2) < r**2 and (i, j) not in perimeter:
+            pt = (i, j)
+            interior.append(pt)
+
 # Set grid values outside disk to zero
 for i in range(N):
     for j in range(N):
-        if ((i - x0)**2 + (j - y0)**2) > r**2 and grid[i, j] != 1:
+        if (i, j) in exterior:
             grid[i, j] = 0
-
+            
 # Create a list of growth points
 growth = []
     
@@ -84,18 +100,12 @@ growth.append(growPt)
 def laplaceOperator(grid):
     global growth
     N = len(grid)
-    pts = []
-    
-    for i in range(N):
-        for j in range(N):
-            if ((i - x0)**2 + (j - y0)**2) < r**2:
-                pt = (i, j)
-                pts.append(pt)
                 
     # Update each point in the randomized order
+    pts = interior.copy()
     np.random.shuffle(pts)
     for i, j in pts:
-        if (i, j) not in growth and (i, j) not in perimeter:
+        if (i, j) not in growth:
             up = grid[i-1, j]
             down = grid[i+1, j]
             left = grid[i, j-1]
@@ -123,7 +133,7 @@ def simulation(grid):
         for delta_i, delta_j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:  # Displacements: up, down, left, right
             new_i, new_j = i + delta_i, j + delta_j
             
-            if ((new_i - x0)**2 + (new_j - y0)**2) < r**2 and (new_i, new_j) not in perimeter and (new_i, new_j) not in growth:
+            if (new_i, new_j) in interior and (new_i, new_j) not in growth:
                 possibleSites.append((new_i, new_j))
 
     # Terminate if the algorithm is stuck
@@ -133,7 +143,7 @@ def simulation(grid):
     # Calculate growth probability for each possible growth site
     probabilities = []
     for i, j in possibleSites:
-        prob = grid[i, j]**2 # you can square or square root this
+        prob = grid[i, j] # you can square or square root this
         probabilities.append(prob)
 
     # Normalize probabilities
@@ -151,9 +161,10 @@ def simulation(grid):
     grid[newPoint] = 0
     growth.append(newPoint)
 
-    # Terminate if reached boundary
-    if ((newPoint[0] - x0)**2 + (newPoint[1] - y0)**2) >= (r - 1)**2:
-        return grid
+    # Terminate if touched boundary
+    for delta_i, delta_j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:  # Displacements: up, down, left, right
+        if (newPoint[0] + delta_i, newPoint[1] + delta_j) in perimeter or (newPoint[0] + delta_i, newPoint[1] + delta_j) in exterior:
+            return grid
         
     # Update the grid and recursively call the simulation function
     grid = laplaceEquation(grid)
@@ -178,6 +189,11 @@ def animate(i):
         x = growth[i][0]
         y = growth[i][1]
         grid[x][y] = i + 100
+
+        # Show boundary
+        for x, y in perimeter:
+            grid[x, y] = i + 100
+            
         ax.clear()
         ax.matshow(grid, cmap='Blues')
 
@@ -188,7 +204,7 @@ def animate(i):
 fig, ax = plt.subplots()
 
 ani = FuncAnimation(fig, animate, frames = len(growth), interval = 0.0001, repeat = False)
-# ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
+ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
 plt.show()
 
 
