@@ -100,7 +100,8 @@ growth.append(growPt)
 def laplaceOperator(grid):
     global growth
     N = len(grid)
-                
+    newGrid = grid.copy()
+    
     # Update each point in the randomized order
     pts = interior.copy()
     np.random.shuffle(pts)
@@ -110,8 +111,8 @@ def laplaceOperator(grid):
             down = grid[i+1, j]
             left = grid[i, j-1]
             right = grid[i, j+1]
-            grid[i, j] = (left + right + up + down) / 4
-    return grid
+            newGrid[i, j] = (left + right + up + down) / 4
+    return newGrid
 
 # Define Laplace's equation
 def laplaceEquation(grid, iterations = 100):
@@ -204,7 +205,7 @@ def animate(i):
 fig, ax = plt.subplots()
 
 ani = FuncAnimation(fig, animate, frames = len(growth), interval = 0.0001, repeat = False)
-ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
+#ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
 plt.show()
 
 
