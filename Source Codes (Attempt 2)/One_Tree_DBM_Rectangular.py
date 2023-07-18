@@ -64,6 +64,7 @@ def laplaceOperator(grid):
     x_row = len(grid)
     y_col = len(grid[0])
     newGrid = grid.copy()
+    
     for i in range(1, x_row - 1): # Keeps the first and last row values fixed
         for j in range(0, y_col):
             if (i, j) not in growth:
