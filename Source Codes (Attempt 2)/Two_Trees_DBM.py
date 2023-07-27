@@ -43,7 +43,7 @@ growPtDown = (growRowDown, growColDown)
 growthDown.append(growPtDown)
 
 # Initializing Laplace's equation on the grid
-iterations = 100
+iterations = 500
 for _ in range(iterations):
     for i in range(1, x_row-1): # Keeps the first and last row values fixed
         for j in range(0, y_col):
@@ -70,7 +70,7 @@ def laplaceOperator(grid):
     return newGrid
 
 # Define Laplace's equation
-def laplaceEquation(grid, iterations = 100):
+def laplaceEquation(grid, iterations = 500):
     for _ in range(iterations):
         grid = laplaceOperator(grid)
     return grid
