@@ -120,6 +120,7 @@ def simulation(grid):
     # Add new growth site to growth list
     grid[newPoint] = 0
     growth.append(newPoint)
+    # Terminate if reached bottom
     if newPoint[0] == x_row - 1:
         return grid
 
