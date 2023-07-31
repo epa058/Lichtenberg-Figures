@@ -70,7 +70,7 @@ A: A while back, I saw a few people on YouTube [making Lichtenberg figures on wo
 
 A: That was a valid criticism back in 2022. Now you're just being picky.
 
-#### Q: Why can we no longer set our own starting positions for algorithms 3 and 4?
+#### Q: Why can we no longer set our own starting positions for algorithms v3 and v4?
 
 A: Because I said so.
 
