@@ -26,31 +26,31 @@ else:
     grid = np.zeros((x_row, y_col))
 
 # Set boundary conditions
-grid[0, :] = -10
-grid[-1, :] = 10
+grid[:, 0] = -10
+grid[:, -1] = 10
 
 # Create two lists of growth points
-growthUp = []
-growthDown = []
+growthLeft = []
+growthRight = []
 
 # Set the growth site
-growRowUp, growColUp = 0, y_col // 2
-growPtUp = (growRowUp, growColUp)
-growthUp.append(growPtUp)
+growRowLeft, growColLeft = x_row // 2, 0
+growPtLeft = (growRowLeft, growColLeft)
+growthLeft.append(growPtLeft)
 
-growRowDown, growColDown = x_row-1, y_col // 2
-growPtDown = (growRowDown, growColDown)
-growthDown.append(growPtDown)
+growRowRight, growColRight = x_row // 2, y_col - 1
+growPtRight = (growRowRight, growColRight)
+growthRight.append(growPtRight)
 
 # Initializing Laplace's equation on the grid
 iterations = 500
 for _ in range(iterations):
-    for i in range(1, x_row-1): # Keeps the first and last row values fixed
-        for j in range(0, y_col):
-            up = grid[i-1, j]
-            down = grid[i+1, j]
-            left = grid[i, (j-1) % y_col]
-            right = grid[i, (j+1) % y_col]
+    for i in range(0, x_row):
+        for j in range(1, y_col-1): # Keeps the first and last column values fixed
+            up = grid[(i-1) % x_row, j]
+            down = grid[(i+1) % x_row, j]
+            left = grid[i, (j-1)]
+            right = grid[i, (j+1)]
             grid[i, j] = (left + right + up + down) / 4
 
 # Define the Laplace operator
@@ -59,13 +59,13 @@ def laplaceOperator(grid):
     y_col = len(grid[0])
     newGrid = grid.copy()
     
-    for i in range(1, x_row - 1): # keeps the first and last row values fixed
-        for j in range(0, y_col):
-            if (i, j) not in growthUp and (i, j) not in growthDown:
-                up = grid[i-1, j]
-                down = grid[i+1, j]
-                left = grid[i, (j-1) % y_col]
-                right = grid[i, (j+1) % y_col]
+    for i in range(0, x_row): # keeps the first and last row values fixed
+        for j in range(1, y_col-1):
+            if (i, j) not in growthLeft and (i, j) not in growthRight:
+                up = grid[(i-1) % x_row, j]
+                down = grid[(i+1) % x_row, j]
+                left = grid[i, j-1]
+                right = grid[i, j+1]
                 newGrid[i, j] = (left + right + up + down) / 4
     return newGrid
 
@@ -75,34 +75,34 @@ def laplaceEquation(grid, iterations = 500):
         grid = laplaceOperator(grid)
     return grid
 
-def simulation(grid, direction="up"):
-    global growthUp
-    global growthDown
+def simulation(grid, direction="left"):
+    global growthLeft
+    global growthRight
     x_row = len(grid)
     y_col = len(grid[0])
     
-    if direction == "up":
-        growth = growthUp
-        otherGrowth = growthDown
-    elif direction == "down":
-        growth = growthDown
-        otherGrowth = growthUp
+    if direction == "left":
+        growth = growthLeft
+        otherGrowth = growthRight
+    elif direction == "right":
+        growth = growthRight
+        otherGrowth = growthLeft
     
     # Find all possible growth sites
     possibleSites = []
     for i, j in growth:
         for delta_i, delta_j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:  # Displacements: up, down, left, right
-            new_i, new_j = i + delta_i, (j + delta_j) % y_col
+            new_i, new_j = (i + delta_i) % x_row, j + delta_j
             
-            if 0 <= new_i < x_row and (new_i, new_j) not in growth:
+            if 0 <= new_j < y_col and (new_i, new_j) not in growth:
                 possibleSites.append((new_i, new_j))
 
     # Terminate if the algorithm is stuck or if the trees touch
-    if len(possibleSites) == 0 or bool(set(growthUp) & set(growthDown)) == True: 
+    if len(possibleSites) == 0 or bool(set(growthLeft) & set(growthRight)) == True: 
         return grid
 
     # Calculate growth probability for each possible growth site
-    if direction == "up":
+    if direction == "left":
         probabilities = []
 
         for i, j in possibleSites:
@@ -126,10 +126,10 @@ def simulation(grid, direction="up"):
         print(newPoint)
 
         # Add new growth site to growth list
-        grid[newPoint] = -10 # negative value to ensure it attracts downGrowth
+        grid[newPoint] = -10 # negative value to ensure it attracts rightGrowth
         growth.append(newPoint)
         
-    elif direction == "down":
+    elif direction == "right":
         probabilities = []
         for i, j in possibleSites:
             prob = -grid[i, j] # negative sign to ensure non-negative probability
@@ -152,15 +152,15 @@ def simulation(grid, direction="up"):
         print(newPoint)
 
         # Add new growth site to growth list
-        grid[newPoint] = 10 # positive value to ensure it attracts upGrowth
+        grid[newPoint] = 10 # positive value to ensure it attracts leftGrowth
         growth.append(newPoint)
 
     # Update the grid and recursively call the simulation function
     grid = laplaceEquation(grid)
-    if direction == "up":
-        grid = simulation(grid, "down")
-    elif direction == "down":
-        grid = simulation(grid, "up")
+    if direction == "left":
+        grid = simulation(grid, "right")
+    elif direction == "right":
+        grid = simulation(grid, "left")
         
     return grid
 
@@ -169,8 +169,8 @@ grid = simulation(grid)
 
 # Results
 print(grid)
-print(growthUp)
-print(growthDown)
+print(growthLeft)
+print(growthRight)
 
 # Cleaner results
 Grid = np.zeros((x_row, y_col))
@@ -179,12 +179,12 @@ Grid = np.zeros((x_row, y_col))
 def animate(i): 
     try:
         print(i)
-        x = growthUp[i][0]
-        y = growthUp[i][1]
+        x = growthLeft[i][0]
+        y = growthLeft[i][1]
         Grid[x][y] = i + 100
         
-        x = growthDown[i][0]
-        y = growthDown[i][1]
+        x = growthRight[i][0]
+        y = growthRight[i][1]
         Grid[x][y] = i + 200
         ax.clear()
         ax.matshow(Grid, cmap='Blues')
@@ -195,7 +195,7 @@ def animate(i):
 
 fig, ax = plt.subplots()
 
-growth = min(growthUp, growthDown)
+growth = min(growthLeft, growthRight)
     
 ani = FuncAnimation(fig, animate, frames = len(growth), interval = 0.0001, repeat = False)
 ani.save('DBM.gif', writer='pillow', fps=120, dpi=100)
@@ -204,9 +204,9 @@ plt.show()
 '''
 # Simple plotting
 newGrid = np.zeros((n, n))
-for i, j in growthUp:
+for i, j in growthLeft:
     newGrid[i, j] = -10
-for i, j in growthDown:
+for i, j in growthRight:
     newGrid[i, j] = 10
     
 fig, ax = plt.subplots()
