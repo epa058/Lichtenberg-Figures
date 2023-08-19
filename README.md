@@ -1,8 +1,6 @@
 
 # Lichtenberg Figures
 
-*Currently working on a dielectric breakdown model algorithm. I GOT IT!*
-
 This algorithm was developed in an attempt to best simulate the behaviour of an electric current travelling through an inhomogeneous, insulating material following dielectric breakdown.
 
 The folder **Source Codes (Attempt 1)** contains Python scripts of my first attempt. After working on the single-branch algorithm, I mistakenly implemented depth-first search (DFS) rather than breadth-first search (BFS) for my multi-branch algorithm (I'm no CS major). In the end, my friend Shan Gao helped me develop the final, multi-branch BFS version of this algorithm.
