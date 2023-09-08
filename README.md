@@ -24,8 +24,6 @@ The folder **Animations (Attempt 2)** contains a few selected animations from ce
 
 ## Documentation
 
-Hold on, I'm about to get on arXiv!! Nevermind, got rejected :( 
-
 Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blob/main/Paper.pdf)
 
 
