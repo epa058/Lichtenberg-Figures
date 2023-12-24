@@ -22,6 +22,12 @@ The folder **Animations (Attempt 2)** contains a few selected animations from ce
  Thanks Andrew! Thanks Oscar! Thanks Sebastian! Thanks Fernando! Thanks Shan! \**applause\**
 
 
+## Example (Algorithm v4.0.0 (1))
+
+![](https://github.com/epa058/Lichtenberg-Figures/blob/main/Animations%20(Attempt%202)/Algorithm%20v4.0.0%20(1).png)
+![](https://github.com/epa058/Lichtenberg-Figures/blob/main/Animations%20(Attempt%202)/Algorithm%20v4.0.0%20(1).gif)
+
+
 ## Documentation
 
 Here: [Discount Documentation](https://github.com/epa058/Lichtenberg-Figures/blob/main/Paper.pdf)
