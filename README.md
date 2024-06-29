@@ -1,4 +1,3 @@
-
 # Lichtenberg Figures
 
 This algorithm was developed in an attempt to best simulate the behaviour of an electric current travelling through an inhomogeneous, insulating material following dielectric breakdown.
